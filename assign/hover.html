@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Hover Effect</title>
+<style>
+    #container {
+        text-align: center;
+        margin-top: 50px;
+    }
+    img {
+        width: 300px;
+        height: 200px;
+        transition: transform 0.3s ease-in-out;
+    }
+    img:hover {
+        transform: scale(1.1);
+    }
+</style>
+</head>
+<body>
+
+<div id="container">
+    <img id="first-image" src="initial_image.jpg" alt="First Image" onmouseover="changeImage()">
+    <img id="second-image" src="hidden_image.jpg" alt="Second Image" style="display: none;">
+</div>
+
+<script>
+    function changeImage() {
+        document.getElementById('first-image').style.display = 'none';
+        document.getElementById('second-image').style.display = 'inline-block';
+    }
+</script>
+
+</body>
+</html>
